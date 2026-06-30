@@ -1,39 +1,63 @@
-const FEATURES = [
+import {
+  Camera,
+  Tags,
+  Gauge,
+  Flame,
+  FileDown,
+  ShieldCheck,
+  type LucideIcon,
+} from "lucide-react";
+
+type Feature = {
+  Icon: LucideIcon;
+  title: string;
+  body: string;
+  tint: string;
+  fg: string;
+};
+
+const FEATURES: Feature[] = [
   {
-    emoji: "📸",
+    Icon: Camera,
     title: "Snap & scan",
     body: "Photograph a receipt and Tally reads the merchant, date and amount automatically.",
-    accent: "bg-sky/15",
+    tint: "bg-sky/15",
+    fg: "text-sky",
   },
   {
-    emoji: "🏷️",
+    Icon: Tags,
     title: "Auto-sorted deductions",
     body: "Expenses are categorised and matched to what your occupation can actually claim.",
-    accent: "bg-brand/15",
+    tint: "bg-brand/15",
+    fg: "text-brand-dark",
   },
   {
-    emoji: "📊",
+    Icon: Gauge,
     title: "Tax-readiness score",
     body: "A simple percentage shows how prepared you are — and what to do next.",
-    accent: "bg-grape/15",
+    tint: "bg-[#f3e6ff]",
+    fg: "text-[#a23df0]",
   },
   {
-    emoji: "🔥",
+    Icon: Flame,
     title: "Streaks that stick",
     body: "Friendly nudges and weekly streaks turn receipt-wrangling into a 10-second habit.",
-    accent: "bg-sun/15",
+    tint: "bg-sun/15",
+    fg: "text-[#e07b00]",
   },
   {
-    emoji: "📄",
+    Icon: FileDown,
     title: "myTax-ready export",
     body: "Get a clean summary by category, ready to enter at tax time or hand to your accountant.",
-    accent: "bg-brand/15",
+    tint: "bg-brand/15",
+    fg: "text-brand-dark",
   },
   {
-    emoji: "🔒",
+    Icon: ShieldCheck,
     title: "Private by default",
     body: "Your receipts are yours. Export or delete your data anytime — no surprises.",
-    accent: "bg-sky/15",
+    tint: "bg-sky/15",
+    fg: "text-sky",
   },
 ];
 
@@ -53,9 +77,9 @@ export function Features() {
         {FEATURES.map((f) => (
           <div key={f.title} className="card">
             <div
-              className={`mb-4 flex h-14 w-14 items-center justify-center rounded-2xl text-3xl ${f.accent}`}
+              className={`mb-4 flex h-14 w-14 items-center justify-center rounded-2xl ${f.tint}`}
             >
-              {f.emoji}
+              <f.Icon className={`h-7 w-7 ${f.fg}`} strokeWidth={2.5} />
             </div>
             <h3 className="text-xl font-extrabold">{f.title}</h3>
             <p className="mt-2 font-semibold leading-relaxed text-ink-soft">{f.body}</p>
