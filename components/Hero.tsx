@@ -6,12 +6,12 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-[#eafce0] via-[#f4fded] to-white" />
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 pb-20 pt-14 md:grid-cols-2 md:items-center md:pb-28 md:pt-20">
-        <div>
+      <div className="mx-auto flex max-w-6xl flex-col gap-12 px-5 pb-20 pt-14 md:grid md:grid-cols-2 md:items-center md:pb-28 md:pt-20">
+        <div className="min-w-0">
           <span className="mb-5 inline-block rounded-full bg-brand/15 px-3 py-1 text-sm font-extrabold text-brand-dark">
             🇦🇺 Built for Aussie taxpayers
           </span>
-          <h1 className="text-5xl font-black leading-[1.05] tracking-tight md:text-6xl">
+          <h1 className="text-4xl font-black leading-[1.05] tracking-tight sm:text-5xl md:text-6xl">
             Tax, without the <span className="text-brand">panic.</span>
           </h1>
           <p className="mt-5 max-w-md text-lg font-semibold text-ink-soft md:text-xl">

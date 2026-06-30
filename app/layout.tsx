@@ -49,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-AU" className={`${nunito.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-white text-ink">{children}</body>
+      <body className="min-h-full flex flex-col overflow-x-hidden bg-white text-ink">{children}</body>
     </html>
   );
 }
