@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  /* Tally brand — Duolingo-inspired */
+  --color-brand: #58cc02;
+  --color-brand-light: #89e219;
+  --color-brand-dark: #58a700;
+  --color-brand-shadow: #46a302;
+
+  --color-ink: #3c3c3c;
+  --color-ink-soft: #777777;
+  --color-ink-muted: #afafaf;
+
+  --color-surface: #f7f7f7;
+  --color-line: #e5e5e5;
+
+  --color-sky: #1cb0f6;
+  --color-sky-shadow: #1899d6;
+  --color-sun: #ff9600;
+  --color-sun-shadow: #cc7800;
+  --color-grape: #ce82ff;
+
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #3c3c3c;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Chunky Duolingo-style 3D buttons: a darker bottom border that "presses" in. */
+@layer components {
+  .btn-3d {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3.5
+      text-base font-extrabold uppercase tracking-wide transition-all duration-100
+      border-b-4 active:translate-y-0.5 active:border-b-2 select-none;
+  }
+  .btn-green {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl px-6 py-3.5
+      text-base font-extrabold uppercase tracking-wide transition-all duration-100
+      border-b-4 active:translate-y-0.5 active:border-b-2 select-none
+      bg-brand text-white border-brand-shadow hover:bg-brand-light;
+  }
+  .card {
+    @apply rounded-3xl bg-white border-2 border-line p-6;
+    border-bottom-width: 5px;
+    border-bottom-color: #d6d6d6;
+  }
+}
