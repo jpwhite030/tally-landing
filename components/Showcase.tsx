@@ -14,7 +14,7 @@ function Phone({
   return (
     <div className={`${className} ${featured ? "z-10 md:-translate-y-8" : ""}`}>
       <div className="rounded-[2rem] bg-[#1a1a2e] p-1.5 shadow-2xl ring-1 ring-black/10">
-        <div className="relative aspect-[776/1530] overflow-hidden rounded-[1.6rem] bg-white">
+        <div className="relative aspect-[776/1642] overflow-hidden rounded-[1.6rem] bg-white">
           <Image
             src={src}
             alt={alt}
