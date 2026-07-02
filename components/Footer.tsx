@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Wordmark } from "./Wordmark";
 
 export function Footer() {
@@ -6,18 +7,18 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-5 py-10 sm:flex-row">
         <Wordmark />
         <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-bold text-ink-soft">
-          <a href="#features" className="hover:text-ink">
+          <a href="/#features" className="hover:text-ink">
             Features
           </a>
-          <a href="#waitlist" className="hover:text-ink">
+          <a href="/#waitlist" className="hover:text-ink">
             Waitlist
           </a>
-          <a href="#" className="hover:text-ink">
+          <Link href="/privacy" className="hover:text-ink">
             Privacy
-          </a>
-          <a href="#" className="hover:text-ink">
+          </Link>
+          <Link href="/terms" className="hover:text-ink">
             Terms
-          </a>
+          </Link>
         </nav>
         <p className="text-sm font-semibold text-ink-muted">
           © {new Date().getFullYear()} Tally Tax
